@@ -444,3 +444,42 @@ if (resetForm) {
 
 // نهاية JavaScript الخاص بصفحات حسابي
 
+
+/* صفحه السله */
+document.addEventListener('DOMContentLoaded', () => {
+  const uploadCard = document.getElementById('uploadCard');
+  const fileInput = document.getElementById('fileInput');
+  const fileNameDisplay = document.getElementById('fileNameDisplay');
+  const submitBtn = document.getElementById('submitBtn');
+  const notesInput = document.getElementById('notesInput');
+
+  // Trigger file input when clicking on the upload card
+  uploadCard.addEventListener('click', () => {
+    fileInput.click();
+  });
+
+  // Display selected file name
+  fileInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) {
+      const fileName = e.target.files[0].name;
+      fileNameDisplay.textContent = `تم اختيار: ${fileName}`;
+    }
+  });
+
+  // Form submission handler
+  submitBtn.addEventListener('click', () => {
+    const file = fileInput.files[0];
+    const notes = notesInput.value.trim();
+
+    if (!file) {
+      alert('يرجى رفع صورة الروشتة أولاً.');
+      return;
+    }
+
+    // Processing data (e.g. sending via API)
+    console.log('File attached:', file);
+    console.log('Notes:', notes);
+
+    alert('تم إرسال الروشتة للصيدلي بنجاح!');
+  });
+});

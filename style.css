@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'cairo', sans-serif;
 }
+
 body {
     background-color: #0b1411;
     color: #ffffff;
@@ -11,6 +12,7 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
+
 .app-container {
     width: 100%;
     max-width: 420px;
@@ -19,46 +21,65 @@ body {
     min-height: 100vh;
     position: relative;
 }
+
 #home-page .section-title {
     text-align: right;
 }
+
 .page-content {
     display: none;
 }
+
 .page-content.active {
     display: flex !important;
     flex-direction: column;
     animation: fadeIn 0.3s ease-in-out;
 }
-@keyframes fadeIn{
-    from { opacity: 0; transform: translateY(6px);}
-    to { opacity: 1; transform: translateY(0);}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 .main-title {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 16px;
     color: #ffffff;
 }
+
 .section-title {
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 12px;
     color: #ffffff;
 }
+
 .section {
     margin-bottom: 20px;
 }
-.quick-tags, .category-filters {
+
+.quick-tags,
+.category-filters {
     display: flex;
     gap: 8px;
     overflow-x: auto;
     padding-bottom: 4px;
     direction: rtl;
 }
-.quick-tags::-webkit-scrollbar, .category-filters::-webkit-scrollbar {
+
+.quick-tags::-webkit-scrollbar,
+.category-filters::-webkit-scrollbar {
     display: none;
 }
+
 .tag-btn .filter-btn {
     background-color: #172723;
     border: 1px solid #233833;
@@ -70,12 +91,14 @@ body {
     white-space: nowrap;
     transition: 0.2s;
 }
+
 .filter-btn.active {
     background-color: #1eb992;
     color: #0b1411;
     font-weight: 700;
     border-color: #1eb992;
 }
+
 .prescription-card {
     background-color: #152420;
     border: 1px solid #203530;
@@ -88,15 +111,18 @@ body {
     text-align: right;
     cursor: pointer;
 }
+
 .prescription-info h3 {
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 4px;
 }
+
 .prescription-info p {
     font-size: 13px;
     color: #8da49c;
 }
+
 .prescription-icon {
     font-size: 28px;
     background-color: #1d332d;
@@ -107,11 +133,13 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .products-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
+
 .product-card {
     background-color: #152420;
     border: 1px solid #203530;
@@ -122,6 +150,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .product-img-box {
     background-color: #1b2f29;
     width: 100%;
@@ -132,25 +161,30 @@ body {
     justify-content: center;
     margin-bottom: 10px;
 }
+
 .product-emoji {
     font-size: 38px;
 }
+
 .product-name {
     font-size: 15px;
     font-weight: 700;
     margin-bottom: 2px;
     color: #ffffff;
 }
+
 .product-category {
     font-size: 12px;
     color: #8da49c;
     margin-bottom: 6px;
 }
+
 .product-price {
     font-size: 15px;
     font-weight: 700;
     color: #1eb992;
 }
+
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -165,6 +199,7 @@ body {
     padding: 12px 0;
     z-index: 999;
 }
+
 .nav-item {
     text-decoration: none;
     color: #617b73;
@@ -175,9 +210,11 @@ body {
     gap: 4px;
     transition: 0.2s;
 }
+
 .nav-item i {
     font-size: 18px;
 }
+
 .nav-item.active {
     color: #1eb992;
 }
@@ -251,17 +288,23 @@ body {
         height: 110px;
     }
 }
-.categories-filters, .quick-tags {
+
+.categories-filters,
+.quick-tags {
     display: flex;
     gap: 8px;
     overflow-x: auto;
     padding-bottom: 4px;
     direction: rtl;
 }
-.category-filters::-webkit-scrollbar, .quick-tags::-webkit-scrollbar {
+
+.category-filters::-webkit-scrollbar,
+.quick-tags::-webkit-scrollbar {
     display: none;
 }
-.filter-btn, .tag-btn {
+
+.filter-btn,
+.tag-btn {
     background-color: #152420;
     border: 1px solid #203530;
     color: #ffffff;
@@ -272,6 +315,7 @@ body {
     white-space: nowrap;
     transition: 0.2s;
 }
+
 .filter-btn.active {
     background-color: #1eb992;
     color: #0b1411;
@@ -295,6 +339,7 @@ body {
     border-color: #1eb992;
     transform: translateY(-2px);
 }
+
 .vitamin-card {
     cursor: pointer;
     transition: transform 0.2s, border-color 0.2s;
@@ -325,11 +370,12 @@ body {
     transform: translateY(-2px);
 }
 
-#product-details-page.active{
+#product-details-page.active {
     display: flex !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
+
 /* صفحة التفاصيل */
 .details-container {
     display: flex !important;
@@ -452,7 +498,8 @@ body {
     gap: 8px;
     margin-top: 10px;
 }
-#product-details-page{
+
+#product-details-page {
     width: 100%;
 }
 
@@ -461,7 +508,10 @@ html::-webkit-scrollbar,
 .app-container::-webkit-scrollbar {
     display: none !important;
 }
-body,html, .app-container {
+
+body,
+html,
+.app-container {
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
 }
@@ -661,6 +711,153 @@ body,html, .app-container {
     line-height: 1.8;
     margin-bottom: 20px;
 }
+
+/* صفحه السله */
+
+/* App Container Simulation */
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    max-height: 880px;
+    background-color: #0f191c;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 24px 16px;
+    background-color: #0f191c;
+}
+
+.header h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: right;
+}
+
+/* Content Body */
+.content {
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Upload Card (Dashed Border) */
+.upload-card {
+    border: 1.5px dashed #2d444a;
+    border-radius: 16px;
+    background-color: #121e21;
+    padding: 35px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 28px;
+}
+
+.upload-card:hover {
+    border-color: #1dd1a1;
+    background-color: #152428;
+}
+
+.camera-icon-wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.camera-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.upload-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.upload-subtitle {
+    font-size: 0.9rem;
+    color: #7e949c;
+}
+
+.file-name-display {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #1dd1a1;
+    word-break: break-all;
+}
+
+/* Notes Section */
+.notes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    text-align: right;
+}
+
+.notes-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.notes-textarea {
+    width: 100%;
+    height: 120px;
+    background-color: #121e21;
+    border: 1px solid #24353a;
+    border-radius: 12px;
+    padding: 14px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+    text-align: right;
+}
+
+.notes-textarea::placeholder {
+    color: #4a6168;
+}
+
+.notes-textarea:focus {
+    border-color: #1dd1a1;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background-color: #1dd1a1;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #10ac84;
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
+
 
 /* تنسيق شاشات الموبايل */
 
